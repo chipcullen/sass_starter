@@ -1,0 +1,12 @@
+//This file simply contains the body statement which can contain a lot of global impact on look and feel.
+
+//In case you need it, here is the HTML element that can be styled
+// html {
+// }
+
+body {
+  font-size: 62.5%;
+  color: $txt-primary;
+  background:$body-bg;
+  -webkit-text-size-adjust:100%;  //fix for iOS
+}

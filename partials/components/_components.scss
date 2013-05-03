@@ -1,0 +1,9 @@
+//The organization of this folder is based on Jonathan Snook's SMACSS - however, he uses the term "modules" - which, in Drupal, have a very different and specific meaning. I'm calling them "components" but there are exactly the same thing: individual pieces of a site
+
+
+/* @group Components */
+//This file should just include @import statements of compontent partials
+@import "navigation";
+@import "footer";
+
+/* @end */

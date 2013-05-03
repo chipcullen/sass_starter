@@ -1,0 +1,15 @@
+//This file is the top-level SASS file which imports all other files. No actual CSS should appear here - only @import statements
+
+@import "partials/base/base";  //our base-level pieces, and reset
+
+@import "partials/global/global";  //global style elements - active styling starts here
+
+@import "partials/states/states";  //global states for items adjusted by JS or psuedo state
+
+@import "partials/layout/layout"; //layout declarations
+
+@import "partials/components/components";  //the lion's share of styling will be in components
+
+@import "partials/base/helper_classes"; //helper classes
+
+@import "partials/print/print"; //print style sheets

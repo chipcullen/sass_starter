@@ -1,0 +1,30 @@
+//Adds some outlines so we can see the edges of certain regions. Adjust and season to taste
+header,
+#primary,
+.primary,
+#secondary,
+.secondary,
+nav,
+footer {
+    outline: solid 3px;
+}
+
+
+
+header[role="banner"] {
+    outline-color: orange;
+}
+
+#primary{
+  outline-color: red;
+}
+
+#secondary {
+  outline-color: green;
+}
+.region-nav-main {
+  outline-color: blue;
+}
+footer[role="contentinfo"] {
+  outline-color: grey;
+}

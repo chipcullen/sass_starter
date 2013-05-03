@@ -1,0 +1,9 @@
+//example sprite implementation. This relies on the Compass spriting functionality
+
+// $SPRITENAME-layout: smart;
+$SPRITENAME-spacing: 20px;
+$SPRITENAME-INDIVIDUALPIECENAME-position: 100%;  //pushes it all the way to right
+
+@import "SPRITENAME/*.png";
+
+@include all-SPRITENAME-sprites;

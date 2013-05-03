@@ -1,0 +1,6 @@
+//This should only contain files that are relevant to overall layout.
+//Alternate layouts should be broken into seperate partials
+
+//@import "diagnostics";  //adds useful outlines to see layout
+@import "grids";  //describes the grid-based structure of the page, based on Susy
+//@import "grids_bg";  //adds grid background

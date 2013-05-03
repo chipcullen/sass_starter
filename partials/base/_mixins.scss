@@ -1,0 +1,65 @@
+//This file should contain only mixins
+
+//sets a one off property based on a media query
+@mixin prop-query($min-size, $property, $value){
+    @media screen and (min-width: $min-size){
+        #{$property}: $value;
+    }
+}
+
+//changes font size based on media query, with optional line height adjustment
+@mixin font-query($min-size:10em, $font-size: 1em, $line-height:""){
+    @if $line-height != ""{
+      @media screen and (min-width: $min-size){
+        font-size: $font-size;
+        line-height: $line-height;
+      }
+    } @else {
+      @media screen and (min-width: $min-size){
+        font-size: $font-size;
+      }
+    }
+};
+
+//works with Susy grids. Changes column count based on media query
+@mixin column-query($min-size, $column-count, $total-columns){
+    @media screen and (min-width: $min-size){
+        @include span-columns($column-count, $total-columns);
+    }
+}
+
+//relies on Compass transitions. Simply does a transition all set to the globabl $duration variable
+@mixin transition(){
+  @include transition-property(all);
+  @include transition-duration($duration);
+}
+
+//another transition all, but with configurable duration
+@mixin transition-all($duration: .3s){
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  transition: all $duration ease;
+}
+
+//I know, compass has a background gradient function. 8 times out of 10 I need a simple vertical gradient, and this does it
+@mixin gradient-vert($topcolor: #ffffff, $bottomcolor: #000000){
+  background: $topcolor; /* Old browsers */
+  background: -moz-linear-gradient(top, $topcolor 0%, $bottomcolor 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topcolor), color-stop(100%,$bottomcolor)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $topcolor 0%,$bottomcolor 100%); /* W3C */
+}
+
+//This adds an image to a background on top of a gradient
+@mixin gradient-vert-image($image-url, $top, $left, $topcolor: #ffffff, $bottomcolor: #000000){
+  background: $topcolor url($image-url) no-repeat $top $left; /* Old browsers */
+  background: url($image-url) no-repeat $top $left, -moz-linear-gradient(top, $topcolor 0%, $bottomcolor 100%); /* FF3.6+ */
+  background: url($image-url) no-repeat $top $left, -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topcolor), color-stop(100%,$bottomcolor)); /* Chrome,Safari4+ */
+  background: url($image-url) no-repeat $top $left, -webkit-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* Chrome10+,Safari5.1+ */
+  background: url($image-url) no-repeat $top $left, -o-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* Opera 11.10+ */
+  background: url($image-url) no-repeat $top $left, -ms-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* IE10+ */
+  background: url($image-url) no-repeat $top $left, linear-gradient(to bottom, $topcolor 0%,$bottomcolor 100%); /* W3C */
+}

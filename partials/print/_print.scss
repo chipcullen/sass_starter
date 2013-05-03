@@ -1,0 +1,12 @@
+/* @group Print styles */
+
+@media print {
+
+  @import "print_base";  //includes some useful resets
+
+  //other print-specific styles should start here
+
+
+}
+
+/* @end */

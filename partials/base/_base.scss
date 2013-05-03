@@ -1,0 +1,19 @@
+//This is the base SCSS file. It includes imports of colors, variables, extendables, a reset. The folder itself should contain only "passive" SCSS - that is, SASS that doesn't result in actual new CSS (the exception being the reset). helper_classes.scss is imported seperately into the main style.scss as it needs to come later in the final style sheet.
+
+////////////////////////
+// Compass Imports
+////////////////////////
+//@import 'compass';
+
+////////////////////////
+// Compass Extensions
+////////////////////////
+//@import 'susy';
+
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "extendables";
+//@import "sprites";  //Include if sprites are used
+@import "reset";  //Eric Meyer reset
+@import "box_sizing";  //uses new, logical box model
