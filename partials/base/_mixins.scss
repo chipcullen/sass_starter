@@ -63,3 +63,20 @@
   background: url($image-url) no-repeat $top $left, -ms-linear-gradient(top, $topcolor 0%,$bottomcolor 100%); /* IE10+ */
   background: url($image-url) no-repeat $top $left, linear-gradient(to bottom, $topcolor 0%,$bottomcolor 100%); /* W3C */
 }
+
+@mixin icon($content, $position:"") {
+  @if $position == "" {
+    @extend %icon;
+    content: $content;
+  } @else if $position == before {
+    &:before {
+      @extend %icon;
+      content: $content;
+    }
+  } @else if $position == after {
+    &:after {
+      @extend %icon;
+      content: $content;
+    }
+  }
+}
