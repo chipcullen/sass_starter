@@ -1,7 +1,8 @@
 /* @group Typography  */
+
 //Links
 a, a:link, a:visited {
-
+  color: $link;
 }
 
 a:hover, a:focus {
@@ -76,12 +77,12 @@ dd {
 
 //Emphasis elements
 
-em {
+em, i {
   font-style: italic;
 }
 
-strong {
-  font-weight: bold;
+strong, b {
+  font-weight: 700;
 }
 
 //blockquotes
@@ -89,11 +90,49 @@ blockquote {
 
 }
 
-//getting consistent margin-bottom, if needed
-// p, dl, hr, h1, h2, h3, h4, h5, h6, ol,
-// ul, pre, table, address, fieldset {
-//   margin-bottom: $spacing*2;
-// }
+//code
+pre,
+code {
+  background:$accent-light;
+  padding: 1em;
+  font-family: $mono;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
+code {
+  display: block;
+}
+
+
+//odds & ends
+hr {
+  margin: $spacing 5%;
+}
+small {
+  font-size: 80%;
+}
+sup {
+  font-size: 80%;
+  position: relative;
+  top: -3px;
+}
+sub {
+  font-size: 80%;
+  position: relative;
+  top: 3px;
+}
+
+//main body copy
+
+[role="main"]{
+  p {
+    @extend %bodycopy;
+    margin-bottom: 1em;
+  }
+}
 
 /* @end */

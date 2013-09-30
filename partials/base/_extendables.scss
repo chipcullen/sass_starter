@@ -1,0 +1,64 @@
+%container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing;
+}
+%box {
+  padding: $spacing * 2;
+  margin-bottom: $spacing*2;
+  background: $white;
+  @include border-radius($radius);
+  border: $border;
+  clear: both;
+  @include prop-query($pomelo, padding,$spacing*3);
+}
+
+/* Body copy text sizing */
+// used in a *lot* of places, edit with care
+%bodycopy {
+  font-size: $psize;
+  line-height: 1.375; //22/16
+  @include font-query($grapefruit, 1.8rem);
+  @include font-query($pomelo, 2rem);
+}
+%transition-all{
+  @include transition-property(all);
+  @include transition-duration($duration);
+}
+%icon {
+  font-family: $icon-font;
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+%breakall {
+-ms-word-break: break-all;
+     word-break: break-all;
+
+     // Non standard for webkit
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+
+.clearfix {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *zoom: 1;
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
