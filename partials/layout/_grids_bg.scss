@@ -1,4 +1,4 @@
 //includes grids in the background - change to the main wrapper element selector
-#page {
-     @include susy-grid-background;
+body {
+@include background-grid;
 }

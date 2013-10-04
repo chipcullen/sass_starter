@@ -3,12 +3,15 @@
 ////////////////////////
 // Compass Imports
 ////////////////////////
-//@import 'compass';
+@import 'compass';
 
 ////////////////////////
 // Compass Extensions
 ////////////////////////
-//@import 'susy';
+@import 'singularitygs';
+@import 'toolkit';
+@import 'sassy-buttons';
+@import 'breakpoint';
 
 @import "colors";
 @import "variables";

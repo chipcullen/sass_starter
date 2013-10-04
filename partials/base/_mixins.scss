@@ -21,12 +21,6 @@
     }
 };
 
-//works with Susy grids. Changes column count based on media query
-@mixin column-query($min-size, $column-count, $total-columns){
-    @media screen and (min-width: $min-size){
-        @include span-columns($column-count, $total-columns);
-    }
-}
 
 //relies on Compass transitions. Simply does a transition all set to the globabl $duration variable
 @mixin transition(){

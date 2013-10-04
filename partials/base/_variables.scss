@@ -7,14 +7,34 @@
 //this controls practically all spacing through the site. edit with care
 $spacing: 1em;
 
-$duration: .2s;
-
 $radius: .5em;
+$duration: 0.3s; //for CSS animations
 
-$psize: 1.4em;
+$base-size: 16;
+$psize: 1em;
 
-$sans-serif: Helvetica, Arial, Verdana, sans-serif;
 
-$accent-sans: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+//the major breakpoints used - I like citrus fruit
+$lemon: 30em; //480px
+$orange: 45em; //624px
+$grapefruit: 60em;  //960px
+$pomelo: 80em; //1280px
 
-$serif: Palatino, Georgia, 'Times New Roman', serif;
+//site max width
+$max-width: 140em;
+
+//site min width
+$min-width: 96em;
+
+//font stacks
+$sans-serif:  Helvetica, Arial, Verdana, sans-serif;
+$serif: Georgia, 'Times New Roman', serif;
+$mono: 'Courier New', Courier, mono;
+
+// $icons:
+//$icon-font: "ms2013";
+
+
+//borders
+$border: solid 1px $border-light;
+$border-thick: solid 6px $border-light;

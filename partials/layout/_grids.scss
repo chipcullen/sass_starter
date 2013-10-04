@@ -1,24 +1,6 @@
-//This relies on the Susy grid framework, which is a Compass extension
+//This relies on the Singularity grid framework, which is a Compass extension
 
-$total-columns  : 4;
-//$column-width   : 25% ;
-$gutter-width   : 1.5em;
-$grid-padding   : $gutter-width;
-$container-style: fluid;  //or: fixed, or: magic;
-
-
-// Example usage
-// .site-header, .site-main, .site-footer {
-//     @include container;
-    // @include at-breakpoint($bp 12) {
-    //     @include container;
-    // }
-// }
-// #primary {
-//   @include span-columns(2,4);
-//   @include column-query($bp, 8, 12);
-// }
-// #secondary {
-//   @include span-columns(2 omega,4);
-//   @include column-query($bp, 4 omega, 12);
-// }
+$grids: 6;
+$grids: add-grid(12 at $lemon);
+// $grids: add-grid(12 at $orange);
+// $grids: add-grid(12 at $grapefruit);
