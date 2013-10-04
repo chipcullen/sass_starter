@@ -74,3 +74,8 @@
     }
   }
 }
+
+@mixin font-size($fsize){
+  font-size: #{$fsize}px;
+  font-size: #{$fsize/$base-size}rem;
+}
